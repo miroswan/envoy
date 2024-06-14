@@ -262,3 +262,12 @@ envoy_cc_test(
         "//test/mocks:common_lib",
     ],
 )
+
+envoy_cc_test(
+    name = "clusters_handler_mem_test",
+    srcs = envoy_select_admin_functionality(["clusters_handler_mem_test.cc"]),
+    deps = [
+        ":admin_instance_lib",
+        "//test/test_common:environment_lib",
+    ],
+)
